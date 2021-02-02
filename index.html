@@ -1,0 +1,2916 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Comment débuter dans l'accessibilité numérique ?</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="index, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if (IEMobile)]><meta http-equiv="cleartype" content="on" /><![endif]-->
+    <meta name="pinterest" content="nopin" />
+    <meta name="description" content="" />
+
+    <!-- JavaScript -->
+    <script src="js/Hammer.js"></script>
+    <script src="js/AccessReader.js"></script>
+    <script src="lang/lang_fr.js"></script>
+    <script src="js/screenfull.js"></script>
+
+    <!-- CSS AccessSlide par défaut -->
+    <link
+      rel="stylesheet"
+      href="css/style.min.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <!-- CSS du thème -->
+    <link
+      rel="stylesheet"
+      id="currentCSS"
+      href="css/theme-dcube.min.css"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- CSS du script Highlight -->
+    <link
+      rel="stylesheet"
+      href="highlight/styles/a11y-light.css"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- CSS print -->
+    <link
+      rel="stylesheet"
+      href="css/print.min.css"
+      type="text/css"
+      media="print"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+    <!-- Opengraph / Twitter cards -->
+    <meta
+      property="og:title"
+      content="Comment débuter dans l'accessibilité numérique ? – Support de présentation - DCube"
+    />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Vous êtes développeuse ou développeur et vous êtes intéressés par l'accessibilité numérique mais vous ne savez pas par où commencer ? Venez découvrir les bases du développement de l'accessibilité numérique en HTML."
+    />
+    <meta
+      property="og:url"
+      content="https://emma11y.github.io/accessibilityCon2020"
+    />
+    <meta property="og:site_name" content="DCube" />
+    <meta property="article:tag" content="accessibilité" />
+    <meta property="article:tag" content="a11y" />
+    <meta
+      property="og:image"
+      content="https://emma11y.github.io/accessibilityCon2020/favicon-32x32.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://emma11y.github.io/accessibilityCon2020/favicon-32x32.png"
+    />
+    <meta property="og:image:width" content="1350" />
+    <meta property="og:image:height" content="675" />
+    <meta
+      name="twitter:title"
+      content="Comment débuter dans l'accessibilité numérique ? – Support de présentation -  DCube"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="Vous êtes développeuse ou développeur et vous êtes intéressés par l'accessibilité numérique mais vous ne savez pas par où commencer ? Venez découvrir les bases du développement de l'accessibilité numérique en HTML."
+    />
+    <meta name="twitter:site" content="@eaboaf_" />
+    <meta
+      name="twitter:image"
+      content="https://emma11y.github.io/accessibilityCon2020/favicon-32x32.png"
+    />
+    <meta name="twitter:creator" content="@eaboaf_" />
+  </head>
+  <body>
+    <div id="load">
+      <img src="img_slide/load.gif" alt="Chargement en cours" />
+    </div>
+    <div id="screen" class="modeplan" data-effect="Eno">
+      <div id="wrapper">
+        <a href="#main" id="skip-link">Contenu</a>
+        <div id="prev-next"></div>
+        <div id="volet"></div>
+
+        <header id="banner" role="banner" class="main-header clearfix">
+          <a href="https://dcube.fr/" class="main-logo">
+            <img
+              src="img_slide/dcube/logo_dcube_bleu.png"
+              id="logo"
+              role="img"
+              aria-label="DCube"
+              width="58"
+              height="43"
+            />
+          </a>
+        </header>
+
+        <nav
+          role="navigation"
+          aria-label="sommaire"
+          id="sommaire"
+          class="tool-block tool-block-summary"
+          tabindex="-1"
+        ></nav>
+        <nav role="navigation" id="breadcrumb" class="breadcrumb"></nav>
+
+        <main role="main" id="main" class="dcube-main dcube-edito">
+          <!-- COUVERTURE CONFÉRENCE	 -->
+          <section
+            class="slide dcube-page-full dcube-bgcolor-c4a dcube-couv dcube-couv-start"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h1 class="dcube-couv_title dcube-couv_title-maxi">
+                  <span class="dcube-item-block dcube-text-reinit"
+                    >Comment débuter dans l'accessibilité numérique ?</span
+                  >
+                  <span class="sr"> </span>
+                  <span class="dcube-item-block dcube-text-reinit"></span>
+                </h1>
+                <p class="logo dcube-sep">
+                  <img
+                    class="dcube-icon dcube-icon-couv"
+                    src="img_slide/dcube/logo_dcube_blanc.png"
+                    id="logo"
+                    role="img"
+                    aria-label="DCube"
+                    width="58"
+                    height="43"
+                  />
+                </p>
+                <p class="dcube-couv_subtitle">Emmanuelle ABOAF</p>
+                <p class="dcube-couv_details dcube-color-c5">
+                  AccessibilityCon - 03/02/2021
+                </p>
+                <p class="dcube-couv_details dcube-text-small">
+                  Twitter&nbsp;:
+                  <a
+                    href="https://twitter.com/eaboaf_"
+                    target="_blank"
+                    aria-label="@eaboaf_ : Suivez Emmanuelle ABOAF sur Twitter (Nouvelle fenêtre)"
+                    title="@eaboaf_ : Suivez Emmanuelle ABOAF sur Twitter"
+                    >@eaboaf_</a
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Plan -->
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-bgcolor-c2 dcube-align-center"
+              >
+                <div class="dcube-block center">
+                  <h2 class="dcube-subtitle">Au programme</h2>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center-y">
+                <div class="dcube-block">
+                  <ol class="dcube-text-super">
+                    <li>Définition de l'accessibilité numérique</li>
+                    <li>Comment coder accessible ?</li>
+                    <li>ARIA</li>
+                    <!--<li>Design</li>-->
+                    <li>Documentations</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c4a"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Qu'est ce qu'est <br />l'inaccessibilité numérique ?</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block dcube-block-super center">
+                <ul
+                  class="dcube-text-great-xxl dcube-item-iblock dcubelist-reset alignleft"
+                  style="
+                    margin-right: auto;
+                    margin-left: auto;
+                    max-width: 50rem;
+                  "
+                >
+                  <li>
+                    Impossibilité de zoomer : grossir ou réduire le texte sans
+                    modifier la structure du site.
+                  </li>
+                  <li>Je ne peux pas naviguer.</li>
+                  <li>Les vidéos ne sont pas sous-titrés ni audio-décrits.</li>
+                  <li>La police est trop petite.</li>
+                  <li>Les couleurs sont trop vives ou trop clairs.</li>
+                  <li>
+                    Impossibilité de remplir ou/et de valider un formulaire.
+                  </li>
+                  <li>Les images ne sont pas décrits.</li>
+                  <li>
+                    Mon lecteur d’écran me parle en anglais alors que le site
+                    est en français.
+                  </li>
+                  <li>Je ne peux pas payer en ligne.</li>
+                  <li>
+                    Il y a pleins de boutons/liens identiques non titrés, je ne
+                    sais pas où cliquer.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <h3 class="center">
+                  Quand les utilisateurs ont des problèmes d'accessibilité...
+                </h3>
+                <div class="dcube-cols dcube-margin-t15 aligncenter">
+                  <div class="col-1-3">
+                    <div>
+                      <blockquote class="twitter-tweet">
+                        <p lang="fr" dir="ltr">
+                          Client de .<a href="https://twitter.com/ePagine_Actu"
+                            >@epagine_actu</a
+                          >
+                          depuis des années, je ne peux plus m&#39;y connecter:
+                          le formulaire de connexion est devenu
+                          <a href="https://twitter.com/hashtag/inaccessible"
+                            >#inaccessible</a
+                          >
+                          !
+                          <a href="https://twitter.com/hashtag/A11y">#A11y</a>
+                        </p>
+                        &mdash; Fernando PINTO (@fpintodasilva)
+                        <a
+                          href="https://twitter.com/fpintodasilva/status/739169782902226944"
+                          >4 juin 2016</a
+                        >
+                      </blockquote>
+                    </div>
+                    <div>
+                      <blockquote class="twitter-tweet">
+                        <p lang="fr" dir="ltr">
+                          En tous cas question accessibilité il faudra repasser:
+                          site vocaliser en anglais
+                          <a href="https://twitter.com/hashtag/A11Yfail"
+                            >#A11Yfail</a
+                          >!
+                          <a href="https://t.co/y4j1b2nR2w"
+                            >https://t.co/y4j1b2nR2w</a
+                          >
+                        </p>
+                        &mdash; Sylvie Duchateau (@sylduch)
+                        <a
+                          href="https://twitter.com/sylduch/status/771620820074401792"
+                          >2 septembre, 2016</a
+                        >
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div class="col-1-3">
+                    <div>
+                      <blockquote class="twitter-tweet">
+                        <p lang="fr" dir="ltr">
+                          Vouloir commander sur la Billeterie
+                          <a href="https://twitter.com/hashtag/Fnac">#Fnac</a>
+                          et ne pas pouvoir finaliser parce qu&#39;on ne sait
+                          pas quel type de CB on a choisi!
+                          <a href="https://twitter.com/hashtag/a11y">#a11y</a>
+                          <a href="https://twitter.com/hashtag/raslebol"
+                            >#raslebol</a
+                          >
+                        </p>
+                        &mdash; Fernando PINTO (@fpintodasilva)
+                        <a
+                          href="https://twitter.com/fpintodasilva/status/650711655492550656"
+                          >4 octobre 2015</a
+                        >
+                      </blockquote>
+                    </div>
+                    <div>
+                      <blockquote class="twitter-tweet">
+                        <p lang="fr" dir="ltr">
+                          Inscription
+                          <a href="https://twitter.com/ParisWeb">@ParisWeb</a>
+                          presque terminée! Au moment de payer, le choix du
+                          paiement impossible: bouton, bouton, bouton! Une
+                          solution? :(
+                        </p>
+                        &mdash; Sylvie Duchateau (@sylduch)
+                        <a
+                          href="https://twitter.com/sylduch/status/742355066879934464"
+                          >13 juin 2016</a
+                        >
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  <div class="col-1-3">
+                    <div>
+                      <blockquote class="twitter-tweet">
+                        <p lang="fr" dir="ltr">
+                          Le site de la
+                          <a href="https://twitter.com/Fnac">@Fnac</a>
+                          , avec un lecteur d&#39;écran, c&#39;est juste
+                          l&#39;horreur...
+                          <a href="https://twitter.com/hashtag/a11y">#a11y</a>
+                          <a href="https://twitter.com/hashtag/ParisWeb"
+                            >#ParisWeb</a
+                          >
+                          <a href="https://twitter.com/hashtag/NVDA">#NVDA</a>
+                        </p>
+                        &mdash; MammouthLand 🇫🇷 (@PascaleLC)
+                        <a
+                          href="https://twitter.com/PascaleLC/status/650257068281200640"
+                          >3 octobre 2015</a
+                        >
+                      </blockquote>
+                    </div>
+                    <div>
+                      <blockquote
+                        class="twitter-tweet"
+                        data-conversation="none"
+                      >
+                        <p lang="fr" dir="ltr">
+                          La synthèse prononce donc à chaque fois :
+                          &quot;adresse du lien&quot; puis c&#39;est comme une
+                          pochette surprise qui s&#39;ouvre, puisqu&#39;on ne
+                          sait pas sur quel site on va tomber. Une notion très
+                          personnelle de l&#39;<a
+                            href="https://twitter.com/hashtag/Accessibilit%C3%A9"
+                            >#Accessibilité</a
+                          >
+                          donc... 2/2
+                        </p>
+                        &mdash; Boeuf Céline (@CelineBoeuf)
+                        <a
+                          href="https://twitter.com/CelineBoeuf/status/1347626324047917057"
+                          >8 janvier 2021</a
+                        >
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h3>Donc l'accessibilité numérique, c'est quoi ?</h3>
+                <blockquote>
+                  <p>
+                    « Il s’agit de rendre l’information et le contenu du site
+                    accessibles aux personnes handicapées quelque soit la nature
+                    du handicap et quelque soit la façon dont c’est consulté. »
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <h3 class="center">Pour qui ?</h3>
+                <div class="dcube-cols dcube-margin-t15 alignleft">
+                  <div class="col-1-2">
+                    <ul>
+                      <li>
+                        <b>Déficientes visuelles</b>
+                        <ul>
+                          <li>
+                            Les personnes aveugles et malvoyantes utilisent un
+                            lecteur d’écran pour naviguer sur internet ou une
+                            loupe agrandissante pour lire le contenu du site.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b>Déficientes auditives</b>
+                        <ul>
+                          <li>
+                            Les personnes sourdes et malentendantes ne peuvent
+                            pas comprendre ce qui est dit sur les vidéos d’où la
+                            nécessité de sous-titrer les vidéos.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-1-2">
+                    <ul>
+                      <li>
+                        <b> Déficientes motrices </b> (Ex : IMC, tétraplégie,
+                        Parkinson)
+
+                        <ul>
+                          <li>
+                            Par exemple, les personnes atteintes de Parkinson
+                            tremblent tellement qu’elles ne peuvent pas utiliser
+                            la souris.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <b> Déficientes cognitives </b> (Ex : dyslexie,
+                        photosensibilité)
+
+                        <ul>
+                          <li>
+                            Par exemple, un site comportant des textes jaunes
+                            sur un fond d’orange est complètement illisible pour
+                            les personnes atteintes de photosensibilité. Il faut
+                            donc assurer les contrastes suffisantes pour
+                            l’utilisateur.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>Et n'oublions pas les personnes âgées !</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h3>L'accessibilité, une affaire de tous</h3>
+                <blockquote>
+                  <p>
+                    « On cherche à faciliter la vie aux utilisateurs ayant une
+                    déficience invalidante — dyslexie, daltonisme, surdité,
+                    mauvaise vue, etc. —, on en vient à faciliter la vie de
+                    <b>tous</b> les utilisateurs. »
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block center">
+                  <h3 class="dcube-subtitle">Quelles sont <br />vos armes ?</h3>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c0"
+              >
+                <div class="dcube-block dcube-block-maxi">
+                  <ul class="dcube-font-geomed dcube-text-super">
+                    <li>Un clavier ;</li>
+                    <li>Un lecteur d'écran ;</li>
+                    <li>Et c'est tout.</li>
+                  </ul>
+                  <h4 class="dcube-text-super dcube-border-t1 dcube-border-c4">
+                    Les lecteurs d'écran existants sont :
+                  </h4>
+                  <ul class="dcube-font-geomed">
+                    <li>NVDA (Windows)</li>
+                    <li>VoiceOver (IOS)</li>
+                    <li>TallBack (Android)</li>
+                  </ul>
+                  <p class="font-small">
+                    <a
+                      href="https://access42.net/Publication-des-resultats-de-l-etude-sur-l-usage-des-lecteurs-d-ecran.html"
+                      >En savoir plus sur l'usage des lecteurs d'écran</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c2"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <p class="dcube-text-h2">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >C'est facile de rendre accessible et</span
+                  >
+                  <span class="sr"> </span>
+                  <span class="dcube-text-reinit"
+                    >surtout peu coûteux. <br />Mais comment ?</span
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c4a"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Comment penser accessible avec les composants simples et
+                    régulièrements utilisés en HTML ?</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c2"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h3>
+                  <span class="dcube-item-block">Il y a un formulaire ?</span>
+                  <span class="dcube-item-block"
+                    >Rendez-le accessible de manière simple.</span
+                  >
+                </h3>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <h4 class="center">Formulaire non accessible</h4>
+                <div class="dcube-cols dcube-margin-t15 aligncenter">
+                  <div class="col-1-2">
+                    <h5>Ce que nous codons</h5>
+                    <pre class="w-code">
+                    <code class="alignleft">
+&lt;form role="form"&gt;
+   &lt;fieldset&gt;
+       &lt;legend&gt;Connexion&lt;/legend&gt;
+          &lt;div&gt;
+            &lt;label&gt;Identifiant&lt;/label&gt;
+            &lt;input type="text" id="txtIdentifiant" /&gt;
+          &lt;/div&gt;
+           &lt;div&gt;
+            &lt;label&gt;Mot de passe&lt;/label&gt;
+            &lt;input type="password" id="txtMotDePasse" /&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;input type="checkbox" id="chkSeSouvenirDeMoi" /&gt;
+            &lt;label&gt;Se souvenir de moi ?&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;button type="submit" id="btnEnvoyer"&gt;Connexion&lt;/button&gt;      
+          &lt;/div&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+              </code>
+</pre>
+                  </div>
+                  <div class="col-1-2">
+                    <h5>Ce que nous voyons</h5>
+                    <img
+                      src="img_slide/formulairenonaccessible2.png"
+                      alt="Rendu visuel du formulaire de connexion"
+                    />
+                    <h5>Ce que le lecteur d'écran lit</h5>
+                    <img
+                      src="img_slide/formulairenonaccessible3.png"
+                      alt="Rendu textuel du lecteur d'écran"
+                    />
+                    <div
+                      class="toggle-gp-article toggle-gp dcube-toggle-box dcube-text-tiny"
+                    >
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="alt-transcription-tweet-2"
+                      >
+                        Consulter la transcription de l'image
+                      </button>
+                      <div
+                        id="alt-transcription-tweet-2"
+                        class="content-to-toggle is-hidden dcube-text-tiny alignleft"
+                      >
+                        <div><span>formulaire région</span></div>
+                        <div><span>Connexion groupe</span></div>
+                        <div><span>édition vide</span></div>
+                        <div><span>édition protégé vide</span></div>
+                        <div><span>vide</span></div>
+                        <div><span>case à cocher non coché</span></div>
+                        <div><span>Connexion bouton</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <h4 class="center">Formulaire accessible</h4>
+                <div class="dcube-cols dcube-margin-t15 aligncenter">
+                  <div class="col-1-2">
+                    <h5>Ce que nous codons</h5>
+
+                    <pre class="w-code">
+                    <code class="alignleft">
+&lt;form role="form"&gt;
+   &lt;fieldset&gt;
+       &lt;legend&gt;Connexion&lt;/legend&gt;
+          &lt;div&gt;
+            &lt;label for="txtIdentifiant"&gt;Identifiant&lt;/label&gt;
+            &lt;input type="text" id="txtIdentifiant" /&gt;
+          &lt;/div&gt;
+           &lt;div&gt;
+            &lt;label for="txtMotDePasse"&gt;Mot de passe&lt;/label&gt;
+            &lt;input type="password" id="txtMotDePasse" /&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;input type="checkbox" id="chkSeSouvenirDeMoi" /&gt;
+            &lt;label for="chkSeSouvenirDeMoi"&gt;Se souvenir de moi ?&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;button type="submit" id="btnEnvoyer"&gt;Connexion&lt;/button&gt;      
+          &lt;/div&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+              </code>
+</pre>
+                  </div>
+                  <div class="col-1-2">
+                    <h5>Ce que nous voyons</h5>
+                    <img
+                      src="img_slide/formulaireaccessible2.png"
+                      alt="Rendu visuel du formulaire de connexion"
+                    />
+                    <h5>Ce que le lecteur d'écran lit</h5>
+                    <img
+                      src="img_slide/formulaireaccessible3.png"
+                      alt="Rendu textuel du lecteur d'écran"
+                    />
+                    <div
+                      class="toggle-gp-article toggle-gp dcube-toggle-box dcube-text-tiny"
+                    >
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="alt-transcription-lecteur-ecran-1"
+                      >
+                        Consulter la transcription de l'image
+                      </button>
+                      <div
+                        id="alt-transcription-lecteur-ecran-1"
+                        class="content-to-toggle is-hidden dcube-text-small alignleft"
+                      >
+                        <div><span>formulaire groupe Connexion</span></div>
+                        <div><span>Identifiant édition</span></div>
+                        <div><span>Mot de passe édition protégé</span></div>
+                        <div>
+                          <span
+                            >Case à cocher non coché Se souvenir de moi ?</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            >bouton Connexion hors de groupe hors du
+                            formulaire</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <h4 class="center">
+                  Comment renseigner les champs obligatoires accessibles ?
+                </h4>
+                <div class="dcube-cols dcube-margin-t15 aligncenter">
+                  <div class="col-1-3">
+                    <img
+                      src="img_slide/astucenumerique1.png"
+                      alt="Un formulaire de connexion avec deux champs identifiant et mot de passe suivis d'étoiles rouges"
+                    />
+                  </div>
+                  <div class="col-1-3">
+                    <p class="alignleft dcube-text-small">
+                      Il faut ajouter l'attribut
+                      <code lang="en">required</code> pour définir le champ
+                      obligatoire. Ainsi le lecteur d'écran va mentionner que le
+                      champ est obligatoire.
+                    </p>
+                    <p class="alignleft dcube-text-small">
+                      Voici ce que le lecteur d'écran renvoie :
+                    </p>
+                    <img
+                      src="img_slide/astucenumerique2.png"
+                      alt="Rendu textuel du lecteur d'écran"
+                    />
+                    <div
+                      class="toggle-gp-article toggle-gp dcube-toggle-box dcube-text-tiny"
+                    >
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="alt-transcription-lecteur-ecran-2"
+                      >
+                        Consulter la transcription de l'image
+                      </button>
+                      <div
+                        id="alt-transcription-lecteur-ecran-2"
+                        class="content-to-toggle is-hidden dcube-text-small alignleft"
+                      >
+                        <div>
+                          <span>formulaire groupe Connexion</span>
+                        </div>
+                        <div>
+                          <span
+                            >Identifiant édition obligatoire entrée
+                            invalide</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            >Mot de passe édition protégé obligatoire entrée
+                            invalide</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            >case à cocher non coché Se souvenir de moi ?</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            >bouton Connexion hors de groupe hors de
+                            formulaire</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-1-3">
+                    <img src="img_slide/validation_formulaire.jpg" alt="" />
+
+                    <p class="alignleft dcube-text-small dcube-margin-t15">
+                      Lorsqu'on valide le formulaire, il ne faut pas communiquer
+                      l'information valide ou erronnée par la couleur car les
+                      personnes daltoniennes
+                      <b>ne pourront pas voir la différence</b> sur la couleur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c2"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h3>
+                  <span class="dcube-item-block">Il y a des images ?</span>
+                  <span class="dcube-item-block">Pensez à les décrire.</span>
+                </h3>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c0"
+              >
+                <div class="dcube-block">
+                  <h4 class="center">Comment décrire les images ?</h4>
+
+                  <blockquote class="twitter-tweet" data-conversation="none">
+                    <p lang="fr" dir="ltr">
+                      <a href="https://twitter.com/Academie_Paris"
+                        >@Academie_Paris</a
+                      >
+                      <a href="https://twitter.com/CollectifBude"
+                        >@CollectifBude</a
+                      >
+                      Dommage que ce message ne soit qu’en image! Impossible pr
+                      moi de le lire, maman d’élève concernée!
+                      <a href="https://twitter.com/hashtag/a11yfail"
+                        >#a11yfail</a
+                      >
+                    </p>
+                    &mdash; Sylvie Duchateau (@sylduch)
+                    <a
+                      href="https://twitter.com/sylduch/status/665540899024338944"
+                      >14 novembe 2015</a
+                    >
+                  </blockquote>
+
+                  <p style="margin-top: 1em">
+                    L'attribut <code>alt</code> est une information précieuse
+                    pour les lecteurs d'écrans.
+                  </p>
+                  <p>Mais attention, ne l'utilisez pas n'importe comment.</p>
+                  <ul>
+                    <li>
+                      Si l'image est purement décorative, laissez l'attribut
+                      <code>alt</code> vide.
+                    </li>
+                    <li>
+                      Si l'image contient une information importante,
+                      décrivez-la dans l'attribut <code>alt</code>.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c0"
+              >
+                <div class="dcube-block">
+                  <p class="font-small">
+                    Ne pas mettre le nom du fichier de l'image.
+                  </p>
+                  <pre class="pre-flex" style="margin-left: 1em">
+                    <code>
+&lt;img src="visuel_academie_de_paris-14-11.png" alt="visuel_academie_de_paris-14-11.png" /&gt;
+                    </code>
+                  </pre>
+                  <p class="ml-1">
+                    <span class="font-small"
+                      >Voici ce que le lecteur d'écran restitue :</span
+                    ><br />
+                    <code> graphique visuel_academie_de_paris-14-11.png </code>
+                  </p>
+                  <p class="dcube-border-t1 dcube-border-c4 font-small">
+                    En décrivant ce que comporte l'image, on donne une véritable
+                    information sur le contenu.
+                  </p>
+                  <pre class="pre-flex" style="margin-left: 1em">
+                    <code>
+&lt;img src="visuel_academie_de_paris-14-11.png" alt="Message venant de l'académie de Paris émise le samedi 14 novembre : Un point de situation sur l'ouverture des établissements scolaires et universitaires Lundi, en Île-de-France, sera communiqué ce Samedi en fin de journée." /&gt;
+                    </code>
+                  </pre>
+                  <p class="ml-1">
+                    <span class="font-small"
+                      >Voici ce que le lecteur d'écran restitue :</span
+                    >
+                    <code>
+                      graphique Message venant de l'académie de Paris émise le
+                      samedi 14 novembre : Un point de situation sur l'ouverture
+                      des établissements scolaires et universitaires Lundi, en
+                      Île-de-France, sera communiqué ce Samedi en fin de
+                      journée.
+                    </code>
+                  </p>
+                  <div
+                    class="toggle-gp-article toggle-gp dcube-toggle-box dcube-text-tiny center"
+                  >
+                    <button
+                      class="dcube-btn dcube-btn-toggle"
+                      aria-expanded="false"
+                      aria-controls="visuel-image"
+                    >
+                      Consulter l'image
+                    </button>
+                    <div
+                      id="visuel-image"
+                      class="content-to-toggle is-hidden dcube-text-tiny aligncenter"
+                    >
+                      <img
+                        src="img_slide/visuel_academie_de_paris-14-11.png"
+                        alt="Message venant de l'académie de Paris émise le samedi 14 novembre : Un point de situation sur l'ouverture des établissements scolaires et universitaires Lundi, en Île-de-France, sera communiqué ce Samedi en fin de journée."
+                      />
+                    </div>
+                  </div>
+
+                  <p class="dcube-border-t1 dcube-border-c4 font-small">
+                    Pour en savoir plus sur
+                    <a
+                      href="https://axesslab.com/alt-texts/"
+                      target="_blank"
+                      title="l'utilisation de l'attribut alt (ANGLAIS) - Nouvelle fenêtre"
+                      >l'utilisation de l'attribut alt (EN)</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c2"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h3>
+                  <span class="dcube-item-block"
+                    >Vous naviguez le site avec votre clavier ?</span
+                  >
+                  <span class="dcube-item-block"
+                    >Pensez à mettre en valeur les éléments et à vérifier qu'ils
+                    ont le focus.</span
+                  >
+                </h3>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c0"
+              >
+                <div class="dcube-block center">
+                  <h4>
+                    Comment mettre le focus sur les liens et les boutons ?
+                  </h4>
+                  <figure role="group">
+                    <img src="img_slide/focus.png" alt="" />
+                    <span class="sr"
+                      >Rendu visuel des liens, des boutons et champs ayant le
+                      focus.</span
+                    >
+                  </figure>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <ul>
+                    <li>
+                      <b>Ne supprimez pas</b> le focus mis par défaut depuis le
+                      CSS : <code>a { outline: none; }</code>. Autrement
+                      laissez-le <code>a { outline: 0; }</code>
+                    </li>
+                    <li>
+                      Si vous le supprimez, proposez
+                      <b>un style alternatif</b> (ci-contre l'image) en mettant
+                      en valeur les liens et boutons de manière
+                      <b>visible</b> en CSS avec <code>:focus</code> et
+                      <code>:hover</code>
+                    </li>
+                    <li>
+                      Vérifiez que les menus et ses sous-menus, les champs, les
+                      liens et les boutons soient <b>accessibles</b> depuis la
+                      touche <code>TAB</code> du clavier.
+                    </li>
+                    <li>
+                      Vérifiez que le lecteur d'écran restitue bien les
+                      informations des liens et des boutons.
+                    </li>
+                  </ul>
+                  <p class="dcube-border-t1 dcube-border-c4 font-small">
+                    Article à lire :
+                    <a
+                      href="http://outlinenone.com/"
+                      target="_blank"
+                      title="Don't do it (EN) - Nouvelle fenêtre"
+                      ><span lang="en">Don't do it (EN)</span></a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c0"
+              >
+                <div class="dcube-block center">
+                  <h4>Utilisation du tabindex</h4>
+
+                  <blockquote class="twitter-tweet">
+                    <p lang="fr" dir="ltr">
+                      <a href="https://twitter.com/Mediapart">@Mediapart</a>
+                      Avec ce problème, vous empêchez les personnes handicapées
+                      qui naviguent au clavier de s&#39;abonner ; je ne pense
+                      pas que ce soit votre volonté. Merci beaucoup !
+                    </p>
+                    &mdash; Julie Moynat (@juliemoynat)
+                    <a
+                      href="https://twitter.com/juliemoynat/status/1350780640552235009"
+                      >17 janvier 2021</a
+                    >
+                  </blockquote>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <p>
+                    Attention de ne pas utiliser n'importe comment le
+                    <code>tabindex</code>
+                  </p>
+                  <p>
+                    Le <code>tabindex</code> est très utile à la navigation du
+                    clavier car il permet
+                    <b>de donner ou non le focus à un élément</b>.
+                  </p>
+                  <ul>
+                    <li>
+                      En mettant <code>tabindex="-1"</code>, vous <b>enlevez</b>
+                      l'élément du focus
+                    </li>
+                    <li>
+                      En mettant <code>tabindex="0"</code>, vous <b>donnez</b>
+                      l'élément au focus
+                    </li>
+                    <li>
+                      <b>N'attribuez pas d'ordre</b> au tabindex sur chaque
+                      élément focusable car cela <b>nuit</b> à l'ordre naturel
+                      de la navigation au clavier
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <h4 class="center">Des liens non accessibles</h4>
+                <div class="dcube-cols dcube-margin-t15 aligncenter">
+                  <div class="col-1-2">
+                    <h5>Ce que nous codons</h5>
+
+                    <pre class="pre-no">
+  <code>
+    &lt;a href="#"&gt;Lire la suite&lt;/a&gt;
+  </code>
+</pre>
+
+                    <h5>Ce que nous voyons</h5>
+                    <img
+                      src="img_slide/lien1.png"
+                      alt="Rendu visuel de la page contenant deux articles en latin"
+                    />
+                  </div>
+                  <div class="col-1-2">
+                    <h5>Ce que le lecteur d'écran lit</h5>
+                    <img
+                      src="img_slide/lien3.png"
+                      alt="Rendu textuel du lecteur d'écran"
+                    />
+                    <div
+                      class="toggle-gp-article toggle-gp dcube-toggle-box dcube-text-tiny"
+                    >
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="alt-description-lecteur-ecran-3"
+                      >
+                        Consulter la description de l'image
+                      </button>
+                      <div
+                        id="alt-description-lecteur-ecran-3"
+                        class="content-to-toggle is-hidden dcube-text-small alignleft"
+                      >
+                        <div><span>Accueil</span></div>
+                        <div><span>titre niveau 1</span></div>
+                        <div><span>Liste des articles</span></div>
+                        <div><span>titre niveau 2</span></div>
+                        <div>
+                          <span
+                            >Le passage de
+                            <span lang="la">Lorem Ipsum standard</span>, utilisé
+                            depuis 1500</span
+                          >
+                        </div>
+                        <div>
+                          <span lang="la"
+                            >Lorem ipsum dolor sit amet, consectetur adipsicing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</span
+                          >
+                        </div>
+                        <div><span>lien</span></div>
+                        <div><span>Lire la suite</span></div>
+                        <div><span>titre niveau 2</span></div>
+                        <div>
+                          <span
+                            >Un autre passage de
+                            <span lang="la">Lorem Ipsum standard</span></span
+                          >
+                        </div>
+                        <div>
+                          <span lang="la"
+                            >Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.</span
+                          >
+                        </div>
+                        <div><span>lien</span></div>
+                        <div><span>Lire la suite</span></div>
+                      </div>
+                    </div>
+                    <p class="alignleft dcube-margin-t15">
+                      Comment l'utilisateur du lecteur d'écran peut savoir quel
+                      lien "Lire la suite" appartient à l'article qu'il veut
+                      lire ?
+                    </p>
+                    <p class="alignleft">
+                      Eviter les phrases de type : "cliquez ici", "lire la
+                      suite", "voir ce lien", "ici", "par là", etc.<br />
+                      Mettez une information <b>pertinente</b> et
+                      <b>explicite</b>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <h4 class="center">Des liens accessibles</h4>
+                <div class="dcube-cols dcube-margin-t15 aligncenter">
+                  <div class="col-1-2">
+                    <h5>Ce que nous codons</h5>
+                    <div class="alignleft">
+                      <pre class="pre-flex">
+  <code>
+&lt;a href="#" title="Lire la suite du passage de Lorem Ipsum standard (Nouvelle fenêtre)" target="_blank"&gt;Lire la suite&lt;/a&gt;
+
+&lt;a href="#" title="Lire la suite d'un autre passage de Lorem Ipsum standard"&gt;Lire la suite&lt;/a&gt; 
+  </code>
+</pre>
+                    </div>
+
+                    <h5>Ce que nous voyons</h5>
+                    <img
+                      src="img_slide/lien1.png"
+                      alt="Rendu visuel inchangé de la page contenant deux articles en latin"
+                    />
+                  </div>
+                  <div class="col-1-2">
+                    <h5>Ce que le lecteur d'écran lit</h5>
+                    <img
+                      src="img_slide/lien6.png"
+                      alt="Rendu textuel du lecteur d'écran"
+                    />
+                    <div
+                      class="toggle-gp-article toggle-gp dcube-toggle-box dcube-text-tiny"
+                    >
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="alt-description-lecteur-ecran-4"
+                      >
+                        Consulter la description de l'image
+                      </button>
+                      <div
+                        id="alt-description-lecteur-ecran-4"
+                        class="content-to-toggle is-hidden dcube-text-small alignleft"
+                      >
+                        <div><span>Accueil</span></div>
+                        <div><span>titre niveau 1</span></div>
+                        <div><span>Liste des articles</span></div>
+                        <div><span>titre niveau 2</span></div>
+                        <div>
+                          <span
+                            >Le passage de
+                            <span lang="la">Lorem Ipsum</span> standard, utilisé
+                            depuis 1500</span
+                          >
+                        </div>
+                        <div>
+                          <span lang="la"
+                            >Lorem ipsum dolor sit amet, consectetur adipsicing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</span
+                          >
+                        </div>
+                        <div><span>lien</span></div>
+                        <div>
+                          <span
+                            >Lire la suite du passage de
+                            <span lang="la">Lorem Ipsum</span> standard -
+                            Nouvelle fenêtre</span
+                          >
+                        </div>
+                        <div><span>titre niveau 2</span></div>
+                        <div>
+                          <span
+                            >Un autre passage de
+                            <span lang="la">Lorem Ipsum standard</span></span
+                          >
+                        </div>
+                        <div>
+                          <span lang="la"
+                            >Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.</span
+                          >
+                        </div>
+                        <div><span>lien</span></div>
+                        <div>
+                          <span
+                            >Lire la suite d'un autre passage de
+                            <span lang="la">Lorem Ipsum</span> standard</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="alignleft dcube-margin-t15">
+                      Si le lien ouvre une nouvelle fenêtre, il est important de
+                      le préciser.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <h4 class="center">Des boutons non accessibles</h4>
+                <div class="dcube-cols dcube-margin-t15 aligncenter">
+                  <div class="col-1-2">
+                    <h5>Ce que nous codons</h5>
+                    <pre class="w-code">
+                      <code class="alignleft">
+&lt;div&gt;
+  &lt;h1&gt;Choisir votre moyen de paiement&lt;/h1&gt;
+  &lt;button&gt;
+    &lt;img src="visa.png" alt=""/&gt;
+  &lt;/button&gt;
+  &lt;button&gt;
+    &lt;img src="mastercard.png" alt="" /&gt;
+  &lt;/button&gt;
+  &lt;button&gt;
+    &lt;img src="paypal.png" alt=""/&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+                      </code>
+                    </pre>
+                  </div>
+                  <div class="col-1-2">
+                    <h5>Ce que nous voyons</h5>
+                    <img
+                      src="img_slide/bouton1.png"
+                      alt="Rendu visuel pour choisir le moyen de paiement avec trois boutons VISA, Mastercard et PayPal"
+                    />
+
+                    <h5>Ce que le lecteur d'écran lit</h5>
+                    <img
+                      src="img_slide/bouton3.png"
+                      alt="Rendu textuel non valide"
+                    />
+                    <div
+                      class="toggle-gp-article toggle-gp dcube-toggle-box dcube-text-tiny"
+                    >
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="alt-description-lecteur-ecran-5"
+                      >
+                        Consulter la description de l'image
+                      </button>
+                      <div
+                        id="alt-description-lecteur-ecran-5"
+                        class="content-to-toggle is-hidden dcube-text-small alignleft"
+                      >
+                        <div><span>Choisir votre moyen de paiement</span></div>
+                        <div><span>bouton</span></div>
+                        <div><span>bouton</span></div>
+                        <div><span>bouton</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="slide dcube-page-full">
+            <div class="inside dcube-align-center">
+              <div class="dcube-block">
+                <h4 class="center">Des boutons accessibles</h4>
+                <div class="dcube-cols dcube-margin-t15 aligncenter">
+                  <div class="col-1-2">
+                    <h5>Ce que nous codons</h5>
+                    <pre class="w-code">
+                      <code class="alignleft">
+&lt;div&gt;
+  &lt;h1&gt;Choisir votre moyen de paiement&lt;/h1&gt;
+  &lt;button title="Payer avec VISA"&gt;
+    &lt;img src="visa.png" alt=""/&gt;
+  &lt;/button&gt;
+  &lt;button&gt;
+    &lt;img src="mastercard.png" alt="Payer avec MasterCard" /&gt;
+  &lt;/button&gt;
+  &lt;button&gt;
+    &lt;img src="paypal.png" alt="Payer avec Paypal"/&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+                      </code>
+                    </pre>
+                  </div>
+                  <div class="col-1-2">
+                    <h5>Ce que nous voyons</h5>
+                    <img
+                      src="img_slide/bouton1.png"
+                      alt="Rendu visuel pour choisir le moyen de paiement avec trois boutons VISA, Mastercard et PayPal"
+                    />
+                    <h5>Ce que le lecteur d'écran lit</h5>
+                    <img
+                      src="img_slide/bouton6.png"
+                      alt="Rendu textuel valide"
+                    />
+                    <div
+                      class="toggle-gp-article toggle-gp dcube-toggle-box dcube-text-tiny"
+                    >
+                      <button
+                        class="dcube-btn dcube-btn-toggle"
+                        aria-expanded="false"
+                        aria-controls="alt-description-lecteur-ecran-6"
+                      >
+                        Consulter la description de l'image
+                      </button>
+                      <div
+                        id="alt-description-lecteur-ecran-6"
+                        class="content-to-toggle is-hidden dcube-text-small alignleft"
+                      >
+                        <div><span>Choisir votre moyen de paiement</span></div>
+                        <div><span>Payer avec VISA graphique bouton</span></div>
+                        <div>
+                          <span>Payer avec MasterCard graphique bouton</span>
+                        </div>
+                        <div>
+                          <span>Payer avec PayPal graphique bouton</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c4a"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Comment rendre accessible la structure du site ?</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c0">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c0"
+              >
+                <div class="dcube-block center">
+                  <h3>Définir la langue de votre site</h3>
+
+                  <div>
+                    <blockquote class="twitter-tweet">
+                      <p lang="fr" dir="ltr">
+                        En tous cas question accessibilité il faudra repasser:
+                        site vocaliser en anglais
+                        <a href="https://twitter.com/hashtag/A11Yfail"
+                          >#A11Yfail</a
+                        >!
+                        <a href="https://t.co/y4j1b2nR2w"
+                          >https://t.co/y4j1b2nR2w</a
+                        >
+                      </p>
+                      &mdash; Sylvie Duchateau (@sylduch)
+                      <a
+                        href="https://twitter.com/sylduch/status/771620820074401792"
+                        >2 septembre 2016</a
+                      >
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <p>
+                    Précisez bien la langue utilisée de votre site sur
+                    l'attribut <code>lang</code> car sinon, le lecteur d'écran
+                    vocalisera en anglais, langue utilisée par défaut.
+                  </p>
+
+                  <code class="code hljs xml code-inline-block">
+                    <span class="hljs-tag"
+                      >&lt;<span class="hljs-title">html</span>
+                      <span class="hljs-attribute">lang</span>=<span
+                        class="hljs-value"
+                        >"fr"</span
+                      ></span
+                    ><span class="hljs-tag">&gt;</span
+                    ><span class="hljs-tag"
+                      >&lt;<span class="hljs-title">/html</span
+                      ><span class="hljs-tag">&gt;</span></span
+                    >
+                  </code>
+
+                  <p class="dcube-border-t1 dcube-border-c4">
+                    Si, sur votre page HTML, vous écrivez un mot ou phrase dans
+                    une autre langue, précisez la nature de la langue dans le
+                    <code>span</code> pour que le lecteur d'écran vocalise le
+                    texte dans la bonne langue.
+                  </p>
+
+                  <code class="code hljs xml">
+                    Le lecteur d'écran vocalise en français puisque j'écris du
+                    texte en français.
+                    <span class="hljs-tag"
+                      >&lt;<span class="hljs-title">span</span>
+                      <span class="hljs-attribute">lang</span>=<span
+                        class="hljs-value"
+                        >"en"</span
+                      ><span class="hljs-tag">/&gt;</span></span
+                    >
+                    Then if I write in English, the screen reader must be able
+                    to vocalize in English<span class="hljs-tag"
+                      >&lt;<span class="hljs-title">/span</span
+                      ><span class="hljs-tag">&gt;</span></span
+                    >
+                  </code>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-horizontal">
+              <div
+                class="dcube-page-half-horizontal-col dcube-align-center dcube-margin-b3"
+              >
+                <div class="dcube-block">
+                  <h3 class="dcube-margin-t3 center">
+                    Respectez la hiérarchie des titres
+                  </h3>
+                  <ul>
+                    <li>
+                      Pensez la hiérarchie des titres (h1 à h6) comme une
+                      <strong>table des matières</strong>.
+                    </li>
+                    <li>
+                      Pour faciliter la navigation des lecteurs d’écran, les
+                      headings doivent être dans le <strong>bon ordre</strong> :
+                      h1 > h2 > h3 > h4 > h5 > h6 et il ne doit pas y avoir de
+                      trou entre, par exemple, h1 et h3.
+                    </li>
+                    <li>
+                      Cela permet également aux utilisateurs de lecteurs d'écran
+                      d'<strong>assimiler</strong> la hiérarchie de
+                      l'information.
+                    </li>
+                    <li>Et c'est bon pour le <strong>SEO</strong> !</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dcube-page-half-horizontal_col dcube-bgcolor-c2">
+                <div class="dcube-block center">
+                  <p class="alignleft">
+                    <strong>N'utilisez pas</strong> le heading juste pour
+                    grossir le texte. Si vous voulez grossir le texte, vous
+                    pouvez ajouter le heading dans l'attribut
+                    <code>class</code> ou le styler.
+                  </p>
+                  <code class="code hljs xml code-inline-block">
+                    <span class="hljs-tag"
+                      >&lt;<span class="hljs-title">h1</span>
+                      <span class="hljs-attribute">class</span>=<span
+                        class="hljs-value"
+                        >"h3"</span
+                      ><span class="hljs-tag">&gt;</span></span
+                    >Hello World<span class="hljs-tag"
+                      >&lt;<span class="hljs-title">/h1</span
+                      ><span class="hljs-tag">&gt;</span></span
+                    >
+                  </code>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-align-center-y">
+                <div class="dcube-block">
+                  <h3 class="center">Respectez la structure du document</h3>
+
+                  <ul>
+                    <li>
+                      <code>header</code>, <code>nav</code>,
+                      <code>main</code> et <code>footer</code> sont
+                      obligatoires.
+                    </li>
+                    <li>
+                      <code>main</code> est unique et <code>nav</code> réservé
+                      aux zones de navigation.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c0"
+              >
+                <div class="dcube-block">
+                  <img src="img_slide/structure-globale.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-align-center-y">
+                <div class="dcube-block">
+                  <h3 class="center">
+                    Attribuez les rôles à la structure du document
+                  </h3>
+                  <p>Sont uniques dans la page :</p>
+                  <ul>
+                    <li>
+                      L'attribut <code>role="banner"</code> est placé dans le
+                      tag <code>header</code>
+                    </li>
+                    <li>
+                      L'attribut <code>role="main"</code> est placé dans le tag
+                      <code>main</code>
+                    </li>
+                    <li>
+                      L'attribut <code>role="content-info"</code> est placé dans
+                      le tag <code>footer</code>
+                    </li>
+                    <li>
+                      L'attribut <code>role="search"</code> est utilisé dans une
+                      <code>div</code> contenant la zone de recherche
+                    </li>
+                  </ul>
+
+                  <p>
+                    L'attribut <code>role="navigation"</code> est placé dans le
+                    tag <code>nav</code> et peut être utilisé plusieurs fois.
+                  </p>
+
+                  <p class="font-small dcube-margin-t2">
+                    Pour en savoir plus :
+                    <a
+                      href="https://www.scottohara.me/blog/2018/03/03/landmarks.html"
+                      target="_blank"
+                      title="Accessible Landmarks (EN) - Nouvelle fenêtre"
+                      ><span lang="en">Accessible Landmarks (EN)</span></a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c0"
+              >
+                <div class="dcube-block">
+                  <p>
+                    L'attribut <code>role</code> et ses valeurs permettent de
+                    nous donner des informations sur le but de l'élément en
+                    question.
+                  </p>
+                  <p>
+                    Grâce à ces rôles, les lecteurs d'écrans détectent, au
+                    chargement de la page, <strong>immédiatement</strong> la
+                    navigation ou les navigations, la bannière, le contenu
+                    principal, la zone de recherche et le pied de page.
+                  </p>
+
+                  <img src="img_slide/structure-globale-role.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c4a"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block">ARIA</span>
+                  <span class="sr"></span>
+                  <span class="dcube-text-reinit"
+                    >(Accessible Rich Internet Application)</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full dcube-bgcolor-c2">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-align-center-y">
+                <div class="dcube-block">
+                  <h3 class="center">Définition</h3>
+
+                  <p>
+                    ARIA est une spécification qui propose la possibilité de
+                    définir, sur les composants simples et riches, une
+                    <strong>description</strong> des rôles, des états et des
+                    propriétés, de manière à ce qu’ils soient
+                    <strong>reconnaissables et utilisables</strong> par les
+                    utilisateurs de technologies d’assistance.
+                  </p>
+
+                  <p>
+                    Avec les balises ARIA, on permet de
+                    <strong>faciliter</strong> la navigation au clavier et la
+                    restitution des informations via le lecteur d’écran.
+                  </p>
+
+                  <p class="font-small dcube-border-t1 dcube-border-c4">
+                    <a
+                      href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA"
+                      title="Pour connaître les techniques ARIA - Nouvelle fenêtre"
+                      target="_blank"
+                      >Pour connaître les techniques ARIA</a
+                    >
+                  </p>
+                  <p class="font-small">
+                    <a
+                      href="http://disic.github.io/rgaa_composants_javascript/"
+                      target="_blank"
+                      title="Pour implémenter les composants riches ARIA - Nouvelle fenêtre"
+                      >Pour implémenter les composants riches ARIA</a
+                    >
+                  </p>
+                  <p class="font-small">
+                    <a
+                      href="http://access42.net/Kit-de-survie-du-developpeur-ARIA-1-3.html"
+                      target="_blank"
+                      title="Kit de survie du développeur ARIA - Nouvelle fenêtre"
+                      >Kit de survie du développeur ARIA</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c0"
+              >
+                <div class="dcube-block">
+                  <p>Voici quelques exemples d'attributs ARIA :</p>
+                  <ul>
+                    <li>
+                      <code>aria-label</code> : permet de titrer l'objet
+                      (équivalent du title).
+                    </li>
+                    <li>
+                      <code>aria-labelledby</code> : est utilisé pour indiquer
+                      les ID des éléments qui titrent l'objet.
+                    </li>
+                    <li>
+                      <code>aria-describedby</code> : est utilisé pour indiquer
+                      les ID des éléments qui décrivent l'objet.
+                    </li>
+                    <li><code>aria-required</code> : élément obligatoire</li>
+                    <li><code>aria-checked</code>: élément coché</li>
+                    <li><code>aria-invalid</code> : élément invalide</li>
+                    <li>
+                      <code>aria-live</code> : permet de restituer le contenu à
+                      la suite d'un nouvel événément déclenché
+                    </li>
+                    <li><code>aria-expanded</code>: élément déplié/replié</li>
+                    <li>
+                      <code>aria-hidden</code>: élément caché (visible
+                      visuellement mais caché au lecteur d'écran)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c2"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <p class="dcube-text-h2">
+                  Et voilà, avec l'ajout des attributs HTML, on rend accessible
+                  facilement et c'est peu coûteux.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- <section
+            class="slide dcube-page-full slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c4a"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Vous établissez <br />une charte graphique ?</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block center">
+                  <div>
+                    <blockquote class="twitter-tweet">
+                      <p lang="fr" dir="ltr">
+                        Je… non, rien !
+                        <a href="https://twitter.com/hashtag/a11yfail"
+                          >#a11yfail</a
+                        >
+                        <a href="https://t.co/mlNbpIJikh"
+                          >pic.twitter.com/mlNbpIJikh</a
+                        >
+                      </p>
+                      &mdash; zigazou (@zigazou)
+                      <a
+                        href="https://twitter.com/zigazou/status/672475726520688640"
+                        >3 décembre 2015</a
+                      >
+                    </blockquote>
+                  </div>
+                  <div>
+                    <blockquote class="twitter-tweet">
+                      <p lang="fr" dir="ltr">
+                        Un candidat pour le record du contraste le plus bas: un
+                        placeholder (et pas d&#39;étiquette) à 1,65:1!
+                        <a href="https://twitter.com/hashtag/a11yfail"
+                          >#a11yfail</a
+                        >
+                        <a href="https://t.co/8ZG3dzCKh0"
+                          >pic.twitter.com/8ZG3dzCKh0</a
+                        >
+                      </p>
+                      &mdash; Olivier Nourry (@OlivierNourry)
+                      <a
+                        href="https://twitter.com/OlivierNourry/status/718383832991428613"
+                        >8 avril 2016</a
+                      >
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <h3 class="center">Pensez aux contrastes</h3>
+                  <p class="dcube-margin-t15">
+                    Le rapport de contraste entre le texte et son arrière-plan
+                    doit avoir :
+                  </p>
+                  <ul>
+                    <li>un ratio de 4:5:1 minimum (critère AA)</li>
+                    <li>
+                      un ratio de 3:1 minimum avec un zoom à partir de 120% ou
+                      150% de la taille (critère AA)
+                    </li>
+                    <li>un ratio de 7:1 minimum (critère AAA)</li>
+                    <li>
+                      un ratio de 4:5:1 minimum avec un zoom à partir de 120% ou
+                      150% de la taille (critère AAA)
+                    </li>
+                  </ul>
+
+                  <p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">
+                    <a
+                      href="https://contrast-finder.tanaguru.com/"
+                      target="_blank"
+                      title="Pour définir si vos couleurs sont accessibles avec Tanaguru Contrast Finder - Nouvelle fenêtre"
+                      >Pour définir si vos couleurs sont accessibles avec
+                      Tanaguru Contrast Finder (FR)</a
+                    >
+                  </p>
+                  <p class="dcube-text-tiny">
+                    <a
+                      href="http://colorsafe.co/"
+                      target="_blank"
+                      title="Pour réaliser votre charte graphique avec une palette de couleurs accessibles (EN) - Nouvelle fenêtre"
+                      >Pour réaliser votre charte graphique avec une palette de
+                      couleurs accessibles (EN)</a
+                    >
+                  </p>
+                  <p class="dcube-text-tiny">
+                    <a
+                      href="https://mixitconf.org/2019/au-dela-des-couleurs-des-interfaces-adaptees-au-daltonisme"
+                      target="_blank"
+                      title="Conférence Au delà des couleurs des interfaces adaptées au daltonisme - Nouvelle fenêtre"
+                      >Conférence "Au delà des couleurs des interfaces adaptées
+                      au daltonisme"</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block center">
+                  <img src="img_slide/ecriture-cursive.png" alt="" />
+                  <img src="img_slide/ecriture-fantaisie.png" alt="" />
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <h3 class="center">Pensez à la police</h3>
+                  <h4>Eviter les polices suivantes</h4>
+                  <ul>
+                    <li>
+                      La police de type "cursive" (ou avec empattement) est
+                      déconseillée pour les personnes dyslexiques.
+                    </li>
+                    <li>
+                      La police de type "fantasie" est également déconseillée.
+                      De plus, cette police est principalement décorative et ne
+                      doit pas être utilisée comme police principale pour les
+                      longs passages de texte.
+                    </li>
+                  </ul>
+                  <h4>Open Dyslexie</h4>
+                  <p>
+                    La police "Open Dyslexie" est spécialement créée et utilisée
+                    pour les personnes dyslexiques.
+                  </p>
+                  <h4>Animations</h4>
+                  <p>
+                    Eviter de mettre des textes clignotants et en mouvement.
+                  </p>
+                  <ul>
+                    <li>
+                      Les personnes ayant un déficit d'attention ou un handicap
+                      cognitif peuvent être très gênés.
+                    </li>
+                  </ul>
+
+                  <p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">
+                    <a
+                      href="https://www.reciteme.com/common/ckeditor/filemanager/userfiles/Accessible_Font_PDF-2.pdf"
+                      target="_blank"
+                      title="Choosing an accessible font (EN) - Nouvelle fenêtre"
+                      ><span lang="en"
+                        >Choosing an accessible font (EN)</span
+                      ></a
+                    >
+                  </p>
+                  <p class="dcube-text-tiny">
+                    <a
+                      href="https://webaim.org/techniques/fonts/"
+                      target="_blank"
+                      title="Fonts (EN) - Nouvelle fenêtre"
+                      ><span lang="en">Fonts (EN)</span></a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <h3 class="dcube-subtitle center">Pensez au zoom texte</h3>
+
+                  <ul>
+                    <li>
+                      Pouvoir <strong>agrandir</strong> le site jusqu'à 200%
+                      voire plus sans l'altérer.
+                    </li>
+                    <li>
+                      Mettre les tailles en valeur <strong>relative</strong> :
+                      rem, em ou %.
+                      <ul>
+                        <li class="font-small">
+                          La taille en valeur fixe en px, in, pt ou cm
+                          <strong>ne facilite pas</strong> l'agrandissement des
+                          textes.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <p class="font-small">
+                    Pour en savoir plus sur les valeurs relatives :
+                    <a
+                      href="https://marieguillaumet.com/refonte-mon-portfolio-du-responsive-en-em-premiere-partie/"
+                      target="_blank"
+                      title="Du responsive tout en em - Nouvelle fenêtre"
+                      >Du responsive tout en em</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <img src="img_slide/zoom.jpg" alt="" />
+
+                  <p class="font-small dcube-margin-t2">
+                    Faites la démo en zoomant au maximum sur
+                    <a
+                      href="http://access42.net/"
+                      target="_blank"
+                      title="le site d'Access42 - Nouvelle fenêtre"
+                      >le site d'Access42</a
+                    >.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>-->
+
+          <section
+            class="slide dcube-page-full slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c4a"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >A quel moment on commence à concevoir l'accessibilité
+                    numérique ?</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-vertical">
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <h3 class="dcube-subtitle center">
+                    Dès le début du projet !
+                  </h3>
+                  <blockquote class="twitter-tweet">
+                    <p lang="fr" dir="ltr">
+                      "On ne le dira jamais assez : un site n’est accessible que
+                      si son accessibilité est pensée dès sa conception !"
+                    </p>
+                    &mdash; Accessi_Net (@Accessi_Net) le 9 janvier 2021
+                  </blockquote>
+
+                  <h4>Pas à la fin du projet</h4>
+                  <p>
+                    On n'intègre pas l'accessibilité à la fin du projet car il
+                    faudra refaire chaque page où l'accessibilité fait défaut.
+                    Du coup, ça coûte plus cher de le faire à la fin.
+                  </p>
+
+                  <p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">
+                    <a
+                      href="https://blog.atalan.fr/video-sensibilisation-accessibilite-numerique/"
+                      target="_blank"
+                      title="L’accessibilité numérique à toutes les étapes d’un projet - Nouvelle fenêtre"
+                      >L’accessibilité numérique à toutes les étapes d’un
+                      projet</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <h3>Il n'y a pas de solution magique !</h3>
+
+                  <p>
+                    Les outils de surcouche d'accessibilité web ne rendent pas
+                    accessibles automatiquement les sites internets et empêchent
+                    souvent le fonctionnement du site internet lorsque
+                    l'utilisateur interagit sur le site avec son clavier ou son
+                    lecteur d'écran.
+                  </p>
+                  <p>
+                    La solution pour rendre accessible un site internet est de
+                    <b
+                      >mettre les mains dans le cambouis, autrement dit dans le
+                      code</b
+                    >.
+                  </p>
+
+                  <p class="dcube-text-tiny dcube-border-t1 dcube-border-c4">
+                    <a
+                      href="https://www.lalutineduweb.fr/surcouche-accessibilite-web-mensonges-boules-gommes/"
+                      target="_blank"
+                      title="Les outils de surcouche d’accessibilité web : mensonges et boules de gomme - Nouvelle fenêtre"
+                      >Les outils de surcouche d’accessibilité web : mensonges
+                      et boules de gomme</a
+                    >
+                  </p>
+                  <p class="dcube-text-tiny">
+                    <a
+                      href="https://blog.clever-age.com/fr/2021/01/19/accessibilite-web-bilan-2020-des-plaintes-provenant-des-etats-unis-et-le-role-des-outils-de-sur-couche/"
+                      target="_blank"
+                      title="Accessibilité Web : Bilan 2020 des plaintes provenant des États-Unis et le rôle des outils de sur-couche - Nouvelle fenêtre"
+                      >Accessibilité Web : Bilan 2020 des plaintes provenant des
+                      États-Unis et le rôle des outils de sur-couche</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--<section
+            class="slide dcube-page-full slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c4a"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Législations</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <h3 class="dcube-text-super">
+                    Article 47 de la loi de 2005 pour les administrations
+                  </h3>
+                  <blockquote class="dcube-text-unlimit">
+                    « Les services de communication publique en ligne des
+                    services de l'Etat, des collectivités territoriales et des
+                    établissements publics qui en dépendent doivent être
+                    accessibles aux personnes handicapées. »
+                  </blockquote>
+                  <p class="font-small">
+                    <a
+                      href="https://access42.net/accessibilite-RGAA-obligations-legales"
+                      target="_blank"
+                      title="Accessibilité et RGAA : quelles sont les obligations légales ? - Nouvelle fenêtre"
+                      >Accessibilité et RGAA : quelles sont les obligations
+                      légales ?</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <h3 class="dcube-text-super">
+                    Article 106 de la loi de 2016 pour une République numérique
+                  </h3>
+                  <ul>
+                    <li>
+                      Extension de l'obligation aux
+                      <strong
+                        >organismes délégataires d’une mission de service
+                        public</strong
+                      >
+                      et aux <strong>sociétés privées</strong> sous conditions
+                      de C.A
+                    </li>
+                    <li>
+                      <strong>Schéma pluriannuel</strong>, de mise en
+                      accessibilité publié sur les sites
+                    </li>
+                    <li>
+                      <strong>Mention visible</strong> de l'état de conformité
+                      du site sur la page
+                    </li>
+                    <li>
+                      <strong>Sanction administrative</strong>, jusqu'à 5000 €
+                      par an en cas de manquement
+                    </li>
+                  </ul>
+                  <p class="font-small">
+                    <a
+                      href="https://www.legifrance.gouv.fr/eli/loi/2016/10/7/ECFI1524250L/jo/article_106"
+                      target="_blank"
+                      title="Article 106 - Nouvelle fenêtre"
+                      >Article 106</a
+                    >
+                    de la loi n°2016-1321 pour une République numérique
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+         
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <h4 class="dcube-text-super">
+                    Sont concernés par l'article 47 de la loi du 11 février 2005
+                    :
+                  </h4>
+                  <ul>
+                    <li>Les sites Web publics ;</li>
+                    <li>
+                      Les sites Web privés dont l'entreprise possède le chiffre
+                      d'affaires d'au moins de
+                      <strong>250 millions d'euros</strong>.
+                    </li>
+                  </ul>
+                  <p class="font-small">
+                    Source :
+                    <a
+                      href="https://www.legifrance.gouv.fr/affichTexteArticle.do?cidTexte=JORFTEXT000000809647&idArticle=LEGIARTI000006682279&dateTexte=&categorieLien=cid"
+                      target="_blank"
+                      title="Article 47 en intégralité - Nouvelle fenêtre"
+                      >Article 47 en intégralité</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <p><strong>Pour les sites Web publics</strong>,</p>
+                  <ul class="dcube-text-small">
+                    <li>
+                      A compter du 23 septembre 2019 pour les sites internet,
+                      intranet et extranet créés depuis le 23 septembre 2018 ;
+                    </li>
+                    <li>
+                      A compter du 23 septembre 2020 pour les sites internet,
+                      intranet et extranet créés avant le 23 septembre 2018 ;
+                    </li>
+                    <li>
+                      A compter du 23 juin 2021 pour les applications mobiles,
+                      les progiciels et le mobilier urbain numérique.
+                    </li>
+                  </ul>
+
+                  <p class="dcube-border-t1 dcube-border-c4">
+                    <strong>Pour les sites Web privés</strong>,
+                  </p>
+                  <ul class="dcube-text-small">
+                    <li>
+                      A compter du 1er octobre 2019 pour les sites internet,
+                      intranet et extranet créés à compter de cette même date ;
+                    </li>
+                    <li>
+                      A compter du 1er octobre 2020 pour les sites internet,
+                      intranet et extranet créés avant le 1er octobre 2019 ;
+                    </li>
+                    <li>
+                      A compter du 1er juillet 2021 pour les applications
+                      mobiles, les progiciels et le mobilier urbain numérique.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>-->
+
+          <section
+            class="slide dcube-page-full slide dcube-page-full dcube-page-border dcube-border-c0 dcube-bgcolor-c4a"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2 class="dcube-title-chapter dcube-title-chapter-comfy">
+                  <span class="dcube-text-reinit dcube-item-block"
+                    >Documentations</span
+                  >
+                </h2>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-vertical">
+              <div
+                class="dcube-page-half-vertical_col dcube-align-center dcube-bgcolor-c2"
+              >
+                <div class="dcube-block">
+                  <h3 class="dcube-text-super">Sensibilisation</h3>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.atalan.fr/agissons/fr/"
+                        target="_blank"
+                        title="L'accessibilité numérique, et si nous agissions ? - Nouvelle fenêtre"
+                        >L'accessibilité numérique, et si nous agissions ?</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://threadreaderapp.com/thread/1124961934070226945.html?refreshed=1563516983"
+                        target="_blank"
+                        title="Thread sur l'accessibilité web lors des 20 ans du WCAG - Nouvelle fenêtre"
+                        >Thread sur l'accessibilité web lors des 20 ans du
+                        WCAG</a
+                      >
+                    </li>
+                  </ul>
+                  <h3 class="dcube-text-super dcube-border-t1 dcube-border-c4">
+                    Référentiels
+                  </h3>
+                  <ul>
+                    <li>
+                      <a
+                        href="http://references.modernisation.gouv.fr/rgaa-accessibilite/"
+                        target="_blank"
+                        title="Référentiel Général pour l'Accessibilité de l'Administration (RGAA) - Nouvelle fenêtre"
+                        >Référentiel Général pour l'Accessibilité de
+                        l'Administration (RGAA)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://disic.github.io/rgaa_referentiel/criteres.html"
+                        target="_blank"
+                        title="Méthodologie de tests RGAA - Nouvelle fenêtre"
+                        >Méthodologie de tests RGAA</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.w3.org/Translations/WCAG20-fr/"
+                        target="_blank"
+                        title="Web Content Accessibility Guidelines (WCAG) 2.0 - Nouvelle fenêtre"
+                        ><span lang="en"
+                          >Web Content Accessibility Guidelines (WCAG)</span
+                        >
+                        2.0</a
+                      >
+                    </li>
+                  </ul>
+                  <p>
+                    Bonus :
+                    <a
+                      href="https://checklists.opquast.com/fr/assurance-qualite-web/"
+                      target="_blank"
+                      title="Qualité Web : la checklist de référence d'Opquast - Nouvelle fenêtre"
+                      >Qualité Web : la checklist de référence d'Opquast</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="dcube-page-half-vertical_col dcube-align-center">
+                <div class="dcube-block">
+                  <h3 class="dcube-text-super">Outils de tests</h3>
+                  <p>
+                    <a
+                      href="https://accessibilityinsights.io/"
+                      target="_blank"
+                      title="Accessibility Insights - Nouvelle fenêtre"
+                      ><span lang="en">Accessibility Insights</span></a
+                    ><br />
+                    aide les développeurs à trouver et à résoudre les problèmes
+                    d'accessibilité dans les applications et sites Web.
+                  </p>
+                  <p>
+                    <a
+                      href="https://github.com/DISIC/assistant-rgaa"
+                      target="_blank"
+                      title="Assistant RGAA (extension FF et Chrome) - Nouvelle fenêtre"
+                      >Assistant RGAA (extension FF et Chrome)</a
+                    >
+                    <br />
+                    tests automatiques ou assistés pour l'ensemble des tests du
+                    RGAA 3.
+                  </p>
+                  <p>
+                    <a
+                      href="https://www.deque.com/axe/"
+                      target="_blank"
+                      title="Axe Deque (extension FF et Chrome) - Nouvelle fenêtre"
+                      >Axe Deque (extension FF et Chrome)</a
+                    ><br />
+                    réalisation d’un certain nombre de tests automatiques
+                    (accessible depuis l'inspecteur de code dans l'onglet «
+                    Accessibility Audit »)
+                  </p>
+                  <p>
+                    <a
+                      href="https://addons.mozilla.org/fr/firefox/addon/wcag-contrast-checker/"
+                      target="_blank"
+                      title="WCAG Contrast Checker (extension FF) - Nouvelle fenêtre"
+                      ><span lang="en">WCAG Contrast Checker</span> (extension
+                      FF)</a
+                    >
+                    <br />contrôle des contrastes de couleurs.
+                  </p>
+                  <p>
+                    <a
+                      href="https://addons.mozilla.org/fr/firefox/addon/web-developer/"
+                      target="_blank"
+                      title="Web Developper Toolbar (extension FF et Chrome) - Nouvelle fenêtre"
+                      ><span lang="en">Web Developper Toolbar</span> (extension
+                      FF et Chrome)</a
+                    >
+                    <br />
+                    réalisation d’un certain nombre de tests (cf. méthodologie
+                    de test RGAA).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="slide dcube-page-full">
+            <div class="dcube-page-half-horizontal">
+              <div
+                class="dcube-page-half-horizontal-col dcube-align-center dcube-margin-b3"
+              >
+                <div class="dcube-block">
+                  <h3 class="dcube-margin-t3 center">Formations</h3>
+                  <ul>
+                    Voici la liste non exhautive des agences qui donnent des
+                    formations autour de l'accessibilité numérique :
+                    <li>
+                      <a
+                        href="https://formations.access42.net/"
+                        target="_new"
+                        title="Access42 - Nouvelle fenêtre"
+                        >Access42</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.accede-web.com/formations-accessibilite/"
+                        target="_new"
+                        title="Atalan - Nouvelle fenêtre"
+                        >Atalan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://koena.net/formations/"
+                        target="_new"
+                        title="Koena - Nouvelle fenêtre"
+                        >Koena</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.tanaguru.com/prestations/formations/"
+                        target="_new"
+                        title="Tanaguru - Nouvelle fenêtre"
+                        >Tanaguru</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://temesis.com/formation/"
+                        target="_new"
+                        title="Temesis - Nouvelle fenêtre"
+                      >
+                        Temesis</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dcube-page-half-horizontal_col dcube-bgcolor-c2">
+                <div class="dcube-block center">
+                  <h3 class="center">Accompagnement et audits</h3>
+                  <p>
+                    Ces mêmes agences spécialisées dans l'accessibilité
+                    numérique vous proposent également de l'accompagnement et de
+                    l'audit de vos projets informatiques.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="slide dcube-page-full dcube-bgcolor-c4a dcube-couv dcube-couv-end"
+          >
+            <div class="inside dcube-align-center center">
+              <div class="dcube-block">
+                <h2>Des questions ?</h2>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <!-- #wrapper -->
+
+      <footer id="footer" role="contentinfo">
+        <div
+          id="owner-info"
+          class="owner-info dcube-modal dcube-edito"
+          role="dialog"
+          tabindex="-1"
+          style="display: none"
+          data-close="Fermer les informations éditeur"
+        >
+          <div role="document" tabindex="0">
+            <p>
+              <a href="https://accesslide.net/">AccesSlide créé par Access42</a
+              >, tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <div
+        id="help-info"
+        class="help-info dcube-modal dcube-edito"
+        role="dialog"
+        tabindex="-1"
+        style="display: none"
+        data-close="Fermer l'aide"
+      >
+        <div role="document" tabindex="0">
+          <div class="dcube-cols">
+            <div class="col-1-2">
+              <h2>Navigation</h2>
+              <p>
+                Pour passer d’une page à une autre, vous disposez des boutons
+                «&nbsp;Suivant&nbsp;» et «&nbsp;Précédent&nbsp;».
+              </p>
+              <p>
+                Sur appareil mobile, vous avez la possibilité de changer de page
+                en balayant l’écran&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  de la droite vers la gauche, pour passer à la page
+                  suivante&nbsp;;
+                </li>
+                <li>
+                  de la gauche vers la droite, pour revenir à la page
+                  précédente.
+                </li>
+              </ul>
+              <h3>Navigation avec lecteur d’écran sur appareils mobiles</h3>
+              <p>
+                Si vous utilisez un lecteur d’écran sur mobile, ces actions sont
+                différentes selon votre logiciel&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  sur Android avec <span lang="en">TalkBack</span>&nbsp;:
+                  l’action se réalise avec deux doigts sur l’écran (les deux
+                  doigts doivent &ecirc;tre suffisamment espacés l’un de
+                  l’autre)&nbsp;;
+                </li>
+                <li>
+                  sur <span lang="en">iPhone</span> avec
+                  <span lang="en">VoiceOver</span>&nbsp;: effectuer un double
+                  tap prolongé et maintenir le doigt appuyé quelques secondes
+                  puis balayer l’écran vers la gauche ou la droite.
+                </li>
+                <li>
+                  Si ces actions ne sont pas effectives, vous devez retourner en
+                  haut de page pour atteindre les boutons «&nbsp;Suivant&nbsp;»
+                  et «&nbsp;Précédent&nbsp;».
+                </li>
+              </ul>
+              <h3>Navigation au clavier</h3>
+              <table class="dcube-table-fixed">
+                <caption class="sr">
+                  Navigation au clavier
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Touche</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>CTRL + Espace</kbd>
+                    </td>
+                    <td>
+                      Page suivante avec la dernière version de NVDA ou
+                      <span lang="en">JAWS</span> 18
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>Espace</kbd> ou <kbd>Flèche droite</kbd>
+                    </td>
+                    <td>Page suivante dans les autres cas</td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>MAJ + CTRL + Espace</kbd>
+                    </td>
+                    <td>
+                      Page précédente avec la dernière version de NVDA ou
+                      <span lang="en">JAWS</span> 18
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>MAJ + Espace</kbd> ou <kbd>Flèche gauche</kbd>
+                    </td>
+                    <td>Page précédente dans les autres cas</td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha"><kbd>Début</kbd></td>
+                    <td>Première page</td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha"><kbd>Fin</kbd></td>
+                    <td>Dernière page</td>
+                  </tr>
+                  <tr>
+                    <td class="dcube-table_cell-alpha">
+                      <kbd>ALT + 0 (zéro)</kbd>
+                    </td>
+                    <td>Sommaire</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-1-2">
+              <h2>Options d’accessibilité</h2>
+              <p>
+                <span lang="en">AccessReader</span> propose plusieurs options
+                d’accessibilité à configurer dans le volet
+                «&nbsp;Configuration&nbsp;».
+              </p>
+              <h3>Dyslexie</h3>
+              <p>
+                Pour un meilleur confort de lecture, cochez les options
+                «&nbsp;Police adaptée&nbsp;» et «&nbsp;Interlignage
+                adapté&nbsp;».
+              </p>
+              <h3>Contraste</h3>
+              <p>
+                <span lang="en">AccessReader</span> propose trois niveaux de
+                contraste&nbsp;:
+              </p>
+              <ul>
+                <li>par défaut&nbsp;;</li>
+                <li>inversé&nbsp;;</li>
+                <li>renforcé.</li>
+              </ul>
+              <h3>Vocalisation</h3>
+              <p>
+                Vous pouvez sélectionner, à la section
+                «&nbsp;Accessibilité&nbsp;», différentes options sonores.
+              </p>
+              <p>
+                Vous pouvez choisir les actions qui déclencheront un signal
+                sonore (chaque signal sonore est différent en fonction de
+                l’action)&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  Page&nbsp;: émet un bip lorsque vous arrivez sur une nouvelle
+                  page
+                </li>
+                <li>
+                  Début&nbsp;: émet un bip lorsque vous atteignez la première
+                  page
+                </li>
+                <li>
+                  Fin&nbsp;: émet un bip lorsque vous atteignez la dernière page
+                </li>
+              </ul>
+              <p>
+                Vous pouvez également choisir des éléments supplémentaires à
+                vocaliser&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  Numéro&nbsp;: vocalise le numéro de la page à son affichage
+                </li>
+                <li>
+                  Titre&nbsp;: vocalise le titre de la page à son affichage
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="clear dcube-margin-t2">
+            <h2>
+              Conseils pour l’utilisation d’<span lang="en">AccessReader</span>
+              avec un lecteur d’écran
+            </h2>
+            <div class="col-1-2">
+              <p>
+                <strong>Note </strong>&nbsp;:
+                <span lang="en">AccessReader</span> a été utilisé avec les
+                lecteurs d’écran suivants&nbsp;:
+              </p>
+              <ul>
+                <li>
+                  Windows&nbsp;: NVDA 2017.3 avec Firefox 55 et
+                  <span lang="en">Internet Explorer</span> 11&nbsp;;
+                </li>
+                <li>
+                  Windows&nbsp;: <span lang="en">JAWS</span> version 18 avec
+                  <span lang="en">Internet Explorer</span> 11&nbsp;;
+                </li>
+                <li>
+                  Mac&nbsp;: <span lang="en">Sierra</span> avec
+                  <span lang="en">VoiceOver</span> et Safari.
+                </li>
+                <li>Linux&nbsp;: Ubuntu 14 avec Orca et Firefox 30.</li>
+              </ul>
+              <h3>
+                Recommandations pour la configuration avec un lecteur d’écran
+              </h3>
+              <ol>
+                <li>
+                  Rechercher le bouton «&nbsp;Ouvrir la configuration&nbsp;» (il
+                  se trouve en bas de page).
+                </li>
+                <li>
+                  Choisir la police, l’interlignage et les contrastes les plus
+                  adaptés à sa vision.
+                </li>
+                <li>
+                  Dans la partie «&nbsp;Accessibilité&nbsp;», on peut choisir de
+                  cocher ou non des cases à cocher pour&nbsp;:
+                  <ul>
+                    <li>vocaliser les numéros de page,</li>
+                    <li>
+                      entendre des bips quand on arrive à la première ou la
+                      dernière page,
+                    </li>
+                    <li>vocaliser le titre de la page en cours.</li>
+                  </ul>
+                </li>
+                <li>
+                  Veiller à ce que la case «&nbsp;désactive l’action du clic
+                  pour afficher la page suivante&nbsp;» soit décochée, (NVDA et
+                  <span lang="en">JAWS</span>). Pour
+                  <span lang="en">VoiceOver</span> et Orca, cela ne semble pas
+                  avoir d’incidence.
+                </li>
+                <li>
+                  Dans la partie «&nbsp;lecteur&nbsp;», on peut choisir
+                  d’afficher ou non le sommaire et de consulter le document en
+                  mode page à page ou en mode plan. Dans le cas du mode plan,
+                  toutes les pages seront affichées en mode linéaire. Elles
+                  seront séparées par des titres de niveau 2. Dans le cas du
+                  mode page, il faudra appuyer sur suivant ou sur espace pour
+                  afficher la page suivante.
+                </li>
+              </ol>
+              <h3>
+                Note sur l’utilisation des commandes du lecteur avec un lecteur
+                d’écran
+              </h3>
+              <p>
+                L’appui sur la barre d’espace pour aller à la page suivante ne
+                fonctionne pas avec NVDA et Firefox&nbsp;<abbr
+                  title="version supérieure ou égale à"
+                  >≥</abbr
+                >55, ni avec <span lang="en">JAWS</span> et Internet
+                <span lang="en">Explorer</span>&nbsp;<abbr
+                  title="version supérieure ou égale à"
+                  >≥</abbr
+                >11. Dans ces deux cas, il faut utiliser le raccourci
+                <kbd>CTRL + Espace</kbd> pour passer à la page suivante, et
+                <kbd>MAJ + CTRL + Espace</kbd> pour passer à la page précédente.
+              </p>
+              <p>
+                L’appui sur les autres touches pour aller au début et à la fin
+                du document ne fonctionnent pas non plus avec
+                <span lang="en">JAWS</span> et NVDA. Pour pallier ce problème :
+              </p>
+              <ul>
+                <li>
+                  dans NVDA, appuyer sur <kbd>NVDA + F2</kbd> pour ignorer
+                  l’appui sur la touche suivante ;
+                </li>
+                <li>
+                  dans <span lang="en">JAWS</span>, appuyer sur
+                  <kbd><span lang="en">JAWS</span> + 3</kbd> du pavé
+                  alphanumérique pour ignorer l’appui sur la touche suivante.
+                </li>
+              </ul>
+              <p>
+                <span lang="en">VoiceOver</span> et Orca gèrent très bien la
+                navigation à la page suivante, avec espace, page précédente avec
+                <kbd>SHIFT + espace</kbd>, début et fin de support de
+                présentation.
+              </p>
+              <p>
+                Par contre l’utilisation des flèches droite et gauche ne
+                fonctionne avec aucun des lecteurs d’écran mentionnés ci-dessus.
+              </p>
+            </div>
+            <div class="col-1-2">
+              <h3>
+                Utilisation du dialogue de configuration avec un lecteur d’écran
+              </h3>
+              <p>
+                Lorsqu’on ouvre la configuration, une
+                «&nbsp;Fen&ecirc;tre&nbsp;» apparaît.
+                <span lang="en">VoiceOver</span> annonce
+                «&nbsp;paramètres&nbsp;» avec 7 éléments. Chaque catégorie est
+                annoncée comme «&nbsp;groupe&nbsp;» par
+                <span lang="en">VoiceOver</span>&nbsp;: exemple dyslexie,
+                contrastes, accessibilité, effets (groupe).
+                <span lang="en">VoiceOver</span> annonce le nombre d’éléments
+                dans chaque catégorie. Pour ouvrir une catégorie, appuyer sur
+                <kbd>VO + Majuscule + flèche bas</kbd>.
+              </p>
+              <p>
+                Pour modifier les paramètres accessibilité, une fois que
+                <span lang="en">VoiceOver</span> annonce accessibilité,
+                interagir à l’aide de VO+majuscule+flèche bas et se déplacer
+                parmi les boutons. <span lang="en">VoiceOver</span> n’annonce
+                pas le titre associé à chaque bouton.
+              </p>
+              <p>
+                Avec les autres lecteurs d’écran, il suffit, une fois que la
+                fen&ecirc;tre a été ouverte, d’utiliser la tabulation et
+                d’effectuer les choix souhaités en cochant les éléments à l’aide
+                de la barre d’espace.
+              </p>
+              <p>
+                Veillez à ne pas dépasser le bouton «&nbsp;Enregistrer&nbsp;»
+                car on risque de se retrouver dans la barre d’adresses du
+                navigateur et il est difficile de revenir en arrière.
+              </p>
+              <h3>Autres petits dysfonctionnements des lecteurs d’écran</h3>
+              <h3>NVDA et Orca</h3>
+              <p>
+                Lorsqu’on passe à la page suivante ou précédente et que la
+                vocalisation des numéros de pages est cochée, NVDA et Orca
+                annoncent « null » puis le numéro de page. Pour les chiffres
+                supérieurs à 10, ils continuent d’annoncer 1, 2, 3… Seules les
+                dizaines, 10, 20, 30… sont annoncées correctement.
+              </p>
+              <p>
+                L’annonce des numéros de pages est correcte avec
+                <span lang="en">JAWS</span> à partir de la version 15 et
+                <span lang="en">VoiceOver</span>.
+              </p>
+              <h3><span lang="en">JAWS</span></h3>
+              <p>
+                Si vous utilisez <span lang="en">JAWS</span>, la version 14 du
+                logiciel ne fonctionne pas bien avec Firefox. Préférer
+                l’utilisation du lecteur avec
+                <span lang="en">Internet Explorer</span>. JAWS 14 ne vocalise
+                pas les numéros de page ni leur titre.
+              </p>
+              <p>
+                Pour toute question concernant l’utilisation d’<span lang="en"
+                  >Accessreader</span
+                >
+                avec un lecteur d’écran, ne pas hésiter à
+                <a href="mailto:bonjour@access42.net">nous contacter</a>.
+              </p>
+            </div>
+          </div>
+          <div class="clear dcube-margin-t2">
+            <div class="col-1-2">
+              <h2>Structure des titres</h2>
+              <p>
+                Le premier titre de niveau 1 (<code>h1</code>) rencontré dans la
+                page contient le titre du support de présentation. Ce titre de
+                niveau 1 reste le même tout au long du support de présentation.
+              </p>
+              <p>
+                Ensuite, chaque grande section du support de présentation est
+                titrée par un titre de niveau 2 (<code>h2</code>).
+              </p>
+              <p>
+                À l’intérieur d’une grande section, les sous-sections peuvent
+                être titrées par des titres de niveau 3 (<code>h3</code>) ou par
+                un niveau de titre encore inférieur.
+              </p>
+              <p>
+                Cette structure de titres peut sembler incohérente lorsqu’elle
+                est vocalisée : en effet, on passe parfois d’un
+                <code>h1</code> à un <code>h3</code>, voire à un titre de niveau
+                inférieur. Elle n’en reste pas moins cohérente à l’échelle du
+                document, et parfaitement valide au regard de la norme HTML 5.
+              </p>
+              <p>
+                Par ailleurs, lorsqu’on se trouve dans une sous-section, un fil
+                d’ariane cliquable apparaît après l’en-tête du document, et
+                permet de retourner au début de la grande section concernée si
+                besoin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="nav-wrapper"
+        class="tool-bar footer-nav clearfix navbar-invisible"
+        tabindex="0"
+      >
+        <div id="wrappernav"></div>
+      </div>
+      <div
+        id="setting"
+        class="tool-block tool-block-settings"
+        role="dialog"
+        tabindex="-1"
+        style="display: none"
+      ></div>
+    </div>
+
+    <div id="Caudio"></div>
+    <div
+      id="Dcourante"
+      aria-live="polite"
+      aria-atomic="true"
+      aria-hidden="true"
+    ></div>
+    <script src="js/slide.js"></script>
+    <script src="js/afontgarde.js"></script>
+    <script>
+      AFontGarde('FontAwesome', {
+        glyphs: '\uF101\uF101\uF101\uF101',
+        success: function () {
+          console.log('success');
+        },
+        error: function () {
+          console.log('timeout error');
+        },
+        timeout: 10000,
+      });
+    </script>
+    <script type="text/javascript" src="js/AccessTooltip.js"></script>
+    <script type="text/javascript" src="js/Toggle.js"></script>
+    <script type="text/javascript">
+      AccessTooltip({
+        objs: 'a, button, input, textarea, select,abbr,img',
+        tooltipClassName: 'access-tooltip',
+        toolTipBetween: 2,
+        toolTipUp: true,
+        mouse: true,
+        tempDelay: 1000,
+        useAriaDP: false,
+        useEscClose: true,
+      });
+    </script>
+    <script src="js/AccessNote.js" type="text/javascript"></script>
+
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <script>
+      AccessNote();
+    </script>
+
+    <script src="highlight/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
